@@ -78,3 +78,23 @@ article section h3
   opacity: 0.6;
   font-size: 25px;
 }
+
+body.success
+{
+  background-color: #1d720c;
+  color: white;
+}
+
+body.error
+{
+  background-color: #72160c;
+  color: white;
+}
+
+button.success, button.error
+{
+  border-color: white;
+  color: white;
+  font-size: 20px;
+  background-color: rgba(0,0,0,0.5);
+}
