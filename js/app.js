@@ -51,7 +51,7 @@ function getCardInformations() {
 }
 
 function logResponse(r){
-  console.log(r)
+  console.log(r);
 }
 
 function pollContactLess(){
@@ -66,7 +66,7 @@ function pollContactLess(){
     console.log('Detected: ', r);
     return getCardInformations();
   })
-  .call('StartDetection', {data: {timeout: 10000}}) // Call start detection method
+  .call('StartDetection', {data: {timeout: 1000000}}) // Call start detection method
   .then(function (r) {
      console.log('Please approach your card: ', r);
    }, function (e) {
