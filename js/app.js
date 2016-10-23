@@ -143,7 +143,8 @@ var service = tetra.startEnd()
   }
 });
 
-document.body.addEventListener('click',function() {
+document.body.addEventListener('mousedown',function() {
   service.sendResponse();
+  resetDom()
   tetra.weblet.hide();
 });
