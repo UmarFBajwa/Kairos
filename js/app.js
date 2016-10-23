@@ -15,6 +15,13 @@ function checkServer(){
       // Success!
       var resp = JSON.parse(request.responseText);
       console.log("Success: ", resp.value)
+      var validating = document.querySelectorAll('.assembly')[0]
+      validating.classList.add("ghost")
+      // document.querySelectorAll('.validating')[0].style.display = "none";
+      var validated = document.querySelectorAll('.validated')[0]
+      validated.classList.remove("ghost")
+      // document.querySelectorAll('.validated')[0].style.display = "block";
+
     } else {
       // We reached our target server, but it returned an error
       console.log("Onload Error: ", request)
@@ -55,19 +62,17 @@ function pollContactLess(){
   .close() // Close service
   .open() // Open service
   .on('ClessDetectedEvent', function (r) { // Listen to ClessDetectedEvent
-     console.log('Card detected');
-     console.log('Detected: ', r);
+    console.log('Card detected');
+    console.log('Detected: ', r);
     return getCardInformations();
   })
-    .call('StartDetection', {data: {timeout: 10000}}) // Call start detection method
-    .then(function (r) {
-       console.log('Please approach your card: ', r);
-     }, function (e) {
-       console.log("Error in startDetection: ", e)
-     });
+  .call('StartDetection', {data: {timeout: 10000}}) // Call start detection method
+  .then(function (r) {
+     console.log('Please approach your card: ', r);
+   }, function (e) {
+     console.log("Error in startDetection: ", e)
+   });
 }
-
-
 
 
   pollContactLess();
