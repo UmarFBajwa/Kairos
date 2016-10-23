@@ -12,10 +12,9 @@
 
 body
 {
-  background-color: #fff;
   margin: 0px;
   padding: 0px;
-  color: #000;
+  color: white;
   user-select: none;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -102,9 +101,7 @@ button.success, button.error
 /* The animation is from https://codepen.io/thebabydino/pen/bVQJeV*/
 
 html {
- /* background: -ms-linear-gradient(bottom, #B91313, #2F0202);*/
-  background-image:
-    -webkit-linear-gradient(#B91313, #2F0202), url(image/background.png);
+  background-image: url('../img/background.png');
   height: 100%;
   color: white;
 }
@@ -116,8 +113,6 @@ div, :before {
 }
 
 .assembly {
-  -webkit-filter: drop-shadow(0 0 1px currentColor);
-          filter: drop-shadow(0 0 1px currentColor);
   -webkit-animation: down 2s linear infinite;
           animation: down 2s linear infinite;
 }
@@ -643,21 +638,9 @@ div, :before {
 }
 @-webkit-keyframes up-18 {
   0%, 20.88235% {
-    -webkit-transform: scale(0);
-            transform: scale(0);
+    -webkit-transform: scale(0) translateZ(0);
   }
   100%, 100.88235% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-}
-@keyframes up-18 {
-  0%, 20.88235% {
-    -webkit-transform: scale(0);
-            transform: scale(0);
-  }
-  100%, 100.88235% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
+    -webkit-transform: scale(1) translateZ(0);
   }
 }
