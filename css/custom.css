@@ -18,6 +18,18 @@
   display: none;
 }
 
+.check-mark {
+  position: fixed;
+  top: 200px;
+  left: 70px;
+  /* opacity: 0; */
+  /* transition: opacity 2s ease-in-out; */
+}
+
+.solid {
+  opacity: 1;
+}
+
 .bottom-bar {
   width: 90%;
   z-index: 0;

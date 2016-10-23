@@ -12,6 +12,9 @@ function domManipulation(){
 
   var assembly = document.querySelectorAll('.assembly')[0]
   assembly.classList.add("ghost")
+
+  var check = document.querySelectorAll('.check-mark')[0]
+  check.classList.remove("ghost")
 }
 
 function checkServer(){
