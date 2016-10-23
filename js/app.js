@@ -4,6 +4,16 @@ var contactLessService = tetra.service({ // Instantiate service
   service: 'local.device.contactless0'
 });
 
+function domManipulation(){
+  var validating = document.querySelectorAll('.validating')[0]
+  validating.classList.add("ghost")
+  var validated = document.querySelectorAll('.validated')[0]
+  validated.classList.remove("ghost")
+
+  var assembly = document.querySelectorAll('.assembly')[0]
+  assembly.classList.add("ghost")
+}
+
 function checkServer(){
   var request = new XMLHttpRequest();
   request.open('GET', 'https://psiclops.io/', true);
@@ -15,12 +25,8 @@ function checkServer(){
       // Success!
       var resp = JSON.parse(request.responseText);
       console.log("Success: ", resp.value)
-      var validating = document.querySelectorAll('.validating')[0]
-      validating.classList.add("ghost")
-      // document.querySelectorAll('.validating')[0].style.display = "none";
-      var validated = document.querySelectorAll('.validated')[0]
-      validated.classList.remove("ghost")
-      // document.querySelectorAll('.validated')[0].style.display = "block";
+
+      setTimeout(domManipulation , 4000)
       
     } else {
       // We reached our target server, but it returned an error
