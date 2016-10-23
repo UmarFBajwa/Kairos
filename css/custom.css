@@ -14,6 +14,10 @@
   padding-top: 10px;
 }
 
+.ghost {
+  display: none;
+}
+
 .bottom-bar {
   width: 90%;
   z-index: 0;
@@ -32,6 +36,14 @@
   border: 1px solid white;
 }
 
+.validated {
+  position: absolute;
+  width: 180px;
+  right: -100px;
+  z-index: 0;
+  top: -170px;
+  border: 1px solid white;
+}
 
 body
 {

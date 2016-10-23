@@ -15,6 +15,13 @@ function checkServer(){
       // Success!
       var resp = JSON.parse(request.responseText);
       console.log("Success: ", resp.value)
+      var validating = document.querySelectorAll('.validating')[0]
+      validating.classList.add("ghost")
+      // document.querySelectorAll('.validating')[0].style.display = "none";
+      var validated = document.querySelectorAll('.validated')[0]
+      validated.classList.remove("ghost")
+      // document.querySelectorAll('.validated')[0].style.display = "block";
+      
     } else {
       // We reached our target server, but it returned an error
       console.log("Onload Error: ", request)
