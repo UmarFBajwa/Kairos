@@ -16,18 +16,18 @@
 
 .ghost {
   display: none;
+  /* opacity: 0; */
 }
 
 .check-mark {
   position: fixed;
   top: 200px;
   left: 70px;
-  /* opacity: 0; */
-  /* transition: opacity 2s ease-in-out; */
+  /* opacity: 1; */
+  /* transition: opacity 2s linear; */
 }
 
 .solid {
-  opacity: 1;
 }
 
 .bottom-bar {
@@ -691,3 +691,5 @@ div, :before {
     -webkit-transform: scale(1) translateZ(0);
   }
 }
+
+/* @keyframes fadeOut { from { opacity: 1; } to { opacity: 0; } } */

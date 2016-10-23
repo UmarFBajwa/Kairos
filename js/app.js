@@ -17,11 +17,22 @@ function domManipulation(){
   check.classList.remove("ghost")
 }
 
+function resetDom(){
+  var validating = document.querySelectorAll('.validating')[0]
+  validating.classList.remove("ghost")
+  var validated = document.querySelectorAll('.validated')[0]
+  validated.classList.add("ghost")
+
+  var assembly = document.querySelectorAll('.assembly')[0]
+  assembly.classList.remove("ghost")
+
+  var check = document.querySelectorAll('.check-mark')[0]
+  check.classList.add("ghost")
+}
+
 function checkServer(){
   var request = new XMLHttpRequest();
   request.open('GET', 'https://psiclops.io/', true);
-  // request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
-  // request.send(data);
 
   request.onload = function() {
     if (request.status >= 200 && request.status < 400) {
