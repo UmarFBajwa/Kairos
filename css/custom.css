@@ -8,6 +8,11 @@
   src: url("../fonts/ingenico.ttf");
 }
 
+.top-bar {
+  width: 100%;
+  z-index: 0;
+  padding-top: 10px;
+}
 
 
 body
