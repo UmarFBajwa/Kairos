@@ -32,7 +32,8 @@ function resetDom(){
 
 function checkServer(){
   var request = new XMLHttpRequest();
-  request.open('GET', 'https://psiclops.io/', true);
+  // request.open('GET', 'https://psiclops.io/', true);
+  request.open('GET', 'https://psiclops.io?uid='+uid, true);
 
   request.onload = function() {
     if (request.status >= 200 && request.status < 400) {
