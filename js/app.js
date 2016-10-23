@@ -4,6 +4,31 @@ var contactLessService = tetra.service({ // Instantiate service
   service: 'local.device.contactless0'
 });
 
+function checkServer(){
+  var request = new XMLHttpRequest();
+  request.open('GET', 'https://psiclops.io/', true);
+  // request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
+  // request.send(data);
+
+  request.onload = function() {
+    if (request.status >= 200 && request.status < 400) {
+      // Success!
+      var resp = JSON.parse(request.responseText);
+      console.log("Success: ", resp.value)
+    } else {
+      // We reached our target server, but it returned an error
+      console.log("Onload Error: ", request)
+    }
+  };
+
+  request.onerror = function() {
+    // There was a connection error of some sort
+      console.log("Error: ", request)
+  };
+
+  request.send();
+}
+
 function getCardInformations() {
   contactLessService
     .reset() // Reset service
@@ -85,6 +110,7 @@ var service = tetra.startEnd()
   else {
     // console.log("TLV: ", tlv)
     console.log("UID: ", uid)
+    checkServer()
     tetra.weblet.show();
   }
 });
