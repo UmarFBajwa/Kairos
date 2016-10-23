@@ -76,17 +76,17 @@ function pollContactLess(){
   .connect() // Connect to service
   .close() // Close service
   .open() // Open service
-  // .on('ClessDetectedEvent', function (r) { // Listen to ClessDetectedEvent
-  //   console.log('Card detected');
-  //   console.log('Detected: ', r);
-  //   return getCardInformations();
-  // })
-    .call('StartDetection', {data: {timeout: 10000}, success: detectContact, error: logResponse}) // Call start detection method
-    // .then(function (r) {
-    //   console.log('Please approach your card: ', r); 
-    // }, function (e) {
-    //   console.log("Error in startDetection: ", e)
-    // });
+  .on('ClessDetectedEvent', function (r) { // Listen to ClessDetectedEvent
+    console.log('Card detected');
+    console.log('Detected: ', r);
+    return getCardInformations();
+  })
+    .call('StartDetection', {data: {timeout: 10000}}) // Call start detection method
+    .then(function (r) {
+      console.log('Please approach your card: ', r); 
+    }, function (e) {
+      console.log("Error in startDetection: ", e)
+    });
 }
 
 var service = tetra.startEnd()
