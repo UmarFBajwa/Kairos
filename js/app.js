@@ -16,66 +16,6 @@ function getCardInformations() {
     // .then(function(r){
     //   console.log("getCardInformations: ",r);
     // })
-
-
-  // var aidCommand = ["00", "A4", "04", "00", "07", "A0", "00", "00", "00", "04", "10", "10", "00"];
-  // var PPSEreponse = [];
-  // contactLessService
-  //   .reset() // Reset service
-  //   .call('GetUid', {requestDelay: 0}) // Call GetUid method 
-  //   .success(function (r) {
-  //     console.log(r);
-  //   })
-  //   .call('Apdu', {
-  //     data: { // Select PPSE
-  //       command: ["00", //CLA
-  //         "A4", //INS  select file
-  //         "04", "00",// P1 P2
-  //         "0E",
-  //         "32", "50", "41", "59", "2E", "53", "59", "53", "2E", "44", "44",
-  //         "46", "30", "31", "00"]
-  //     }
-  //   })
-  //   .success(function (r) {
-  //     PPSEreponse = r.response;
-  //   })
-  //   .call('Apdu', {  // Select AID
-  //     data: {
-  //       command: aidCommand
-  //     }
-  //   })
-  //   .success(function (r) {
-  //     if (
-  //       (PPSEreponse[27] == "A0") &&
-  //       (PPSEreponse[28] == "00") &&
-  //       (PPSEreponse[29] == "00") &&
-  //       (PPSEreponse[30] == "00") &&
-  //       (PPSEreponse[31] == "03")
-  //     ){
-  //       aidCommand[9] = "03"; aidCommand[10] = PPSEreponse[32]; aidCommand[11] = PPSEreponse[33];
-  //     } else if (
-  //       (PPSEreponse[27] == "A0") &&
-  //       (PPSEreponse[28] == "00") &&
-  //       (PPSEreponse[29] == "00") &&
-  //       (PPSEreponse[30] == "00") &&
-  //       (PPSEreponse[31] == "04")
-  //     ) { // MC
-  //       aidCommand[10] = PPSEreponse[32];
-  //       aidCommand[11] = PPSEreponse[33];
-  //     } else {
-  //       return; 
-  //     }
-  //     contactLessService
-  //       .reset() // Reset service
-  //       .call('Apdu', {
-  //         data: { // Send APDU to the card
-  //           command: aidCommand
-  //         }, requestDelay: 0
-  //       })
-  //       .success(function (r) {
-  //         console.log(r);
-  //       })
-  //   });
 }
 
 function logResponse(r){
