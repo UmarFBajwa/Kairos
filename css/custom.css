@@ -37,6 +37,7 @@
 }
 
 .validated {
+  margin-top: 100px ;
   position: absolute;
   width: 180px;
   right: -100px;
