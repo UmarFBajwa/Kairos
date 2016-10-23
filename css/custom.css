@@ -14,6 +14,15 @@
   padding-top: 10px;
 }
 
+.validating {
+  position: absolute;
+  width: 180px;
+  right: -100px;
+  z-index: 0;
+  top: -170px;
+  border: 1px solid white;
+}
+
 
 body
 {
