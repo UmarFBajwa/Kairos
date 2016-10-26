@@ -1,13 +1,8 @@
-# Kairos
-
-Winner at Money 20/20 2016
-
-
-This is the app for Ingenico payment terminals that we submitted for the Money20/20 Hackathon 2016. We were one of the top ten winning teams along with winning Ingenico's prize.
+# Kairos - Winner at Money 20/20 2016
 
 ![Kairos Logo](/img/kairos.png "Logo Kairos")
 
-[Kairos](https://github.com/UmarFBajwa/Kairos) - **Parking Validation Made Invisible**
+**Parking Validation Made Invisible**
 
 [![Travis](https://img.shields.io/travis/nosir/cleave.js.svg?maxAge=2592000)](https://travis-ci.org/nosir/cleave.js)
 
@@ -21,6 +16,7 @@ Kairos is a Parking Validation Web Application built on Ingenico's Tetra. Using 
 * [Resources Used](#resources)
 
 #### <a name="why"></a>Why?
+
 Why create Kairos?
 
 Ride in an Uber and you'll see what payment should be, invisible. Money changes hands, yet you never even think about the payment. Every transaction should be like this. For example parking validation. Have you ever forgotten to validate your parking ticket? Or worse yet, lost it and had to pay absurd fees? That stops today. Using Ingenico, Kairos solves this headache.
@@ -34,6 +30,7 @@ Ride in an Uber and you'll see what payment should be, invisible. Money changes 
 #### <a name="project-demo"></a> Live Project Demo
 
 [Short Youtube Demo](https://www.youtube.com/watch?v=KEHgwaxvJ68&feature=youtu.be)
+&
 [Round 2 Pitch](https://www.youtube.com/watch?v=GldEsuR3LEU&feature=youtu.be)
 
 #### <a name="instructions"></a> Instructions
@@ -41,10 +38,10 @@ Ride in an Uber and you'll see what payment should be, invisible. Money changes 
 A User makes a payment at the Venue (restaurant, movies, concert, etc). Using existing technology, they can use the same payment method and simply tap and go to exit the Parking Garage. No more tickets or having to go to some machine.
 
 
-![Kairos Validating](/img/validating.png "Validating")
+![Kairos Validated](/img/sent.png "Validated")
 
 
-![Kairos Validated](/img/validated.png "Validated")
+![Kairos Apple Pass](/img/applepass.png "Apple Pass")
 
 
 #### <a name="resources"></a> Resources Used
